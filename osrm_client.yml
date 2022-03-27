@@ -1,0 +1,50 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: osrm-client
+  labels:
+    app: osrm-client
+spec:
+  selector:
+    app: osrm-client
+  ports:
+  - port: 8000
+    targetPort: 8000
+    name: http
+  type: NodePort
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: osrm-client-config
+  labels:
+    app: osrm-client
+data:
+  OSRM_HOST: "osrm-berlin"
+  OSRM_PORT: "5000"
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: osrm-client
+  labels:
+    deployment: osrm-client
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: osrm-client
+  template:
+    metadata:
+      labels:
+        app: osrm-client
+    spec:
+      containers:
+      - name: osrm-client
+        image: charliesd/osrm-client:latest
+        command: ["python", "main.py"]
+        ports:
+          - containerPort: 8000
+        envFrom:
+          - configMapRef:
+              name: osrm-client-config
