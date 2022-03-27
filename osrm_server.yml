@@ -1,0 +1,38 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: osrm-berlin
+  labels:
+    app: osrm-berlin
+spec:
+  selector:
+    app: osrm-berlin
+  ports:
+  - port: 5000
+    targetPort: 5000
+    name: http
+  type: NodePort
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: osrm-berlin
+  labels:
+    deployment: osrm-berlin
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: osrm-berlin
+  template:
+    metadata:
+      labels:
+        app: osrm-berlin
+    spec:
+      containers:
+      - name: osrm-berlin
+        image: charliesd/osrm-berlin:latest
+        command: ["osrm-routed","--algorithm", "mld", "/data/berlin-latest.osrm"]
+        ports:
+        - containerPort: 5000
+          name: osrm-port
