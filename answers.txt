@@ -1,0 +1,79 @@
+1. It is a culture to collaboratively streamline development and operations processes, involves techniques to speed up the transition of steps between the development team and the technology operations team, based on automation, monitoring and feedback. Among other features, it promotes better communication and encourages collaboration between teams to improve the performance, availability, and fluidity of the integration, development, testing, and deployment process.
+
+2. According to the adaptation of the teams, different organizational structures of bad Devops practices can be found:
+    1. Not having an operations team (Ops).
+    2. Exclude a specific DevOps team from the development team.
+    3. DevOps administrators for Operations only (SysAdmin).
+    4. Use DevOps solely as a development tool.
+    5. Exclude team from database.
+    6. Exclude data from CI/CD methods.
+    7. Unencrypted data migration.
+    8. Let the software become obsolete.
+    9. Recognize different software behaviors between development and operations.
+
+3. Continuous Integration and Continuous Deployment Best Practices:
+    1. Set the toolchains:
+        - Code.
+        - Build.
+        - Test.
+        - Storage.
+        - Deploy.
+        - Config.
+        - Monitor.
+    2. Build artifacts once
+    3. Simplify the tests.
+    4. Cleaning of environments.
+    5. CI/CD as the only way to deploy to production.
+    6. Monitoring and measurement of processes.
+
+4. CI is based on the automation and testing of integrations to be able to identify possible failures and incidents and thus facilitate resolution.
+CD is responsible for implementing the changes and updates detected within CI in test environments in order to deploy them in production environments.
+
+5.
+
+6. Tools or platforms:
+    - CI/CD: Jenkins, TravisCI, AWS Code Deploy, Azure DevOps
+    - Provisioning infrastructure
+    - Configuration Management
+    - Monitoring & alerting: Prometheus, PRTG, AWS CloudWatch, AWS CloudTrail, AWS Dashboard
+    - Logging: AWS Centralized Loggins
+    - Code Review: Github, Azure DevOps, AWS CodeCommit
+    - Code Coverage: PyUnit/UnitTest, Coverage.py.
+    - Issue Tracking: Jira, Gitkraken, Zoho Desk.
+    - Containers and Containers Orchestrations: Docker, Docker Compose, Kubernetes.
+    - Test: Mockito, Mocha, PyTest, Cypress.
+
+7. Unit tests: validate the behavior of a function or module as a unit.
+Integration tests: validate the behavior of a set of functionalities with the rest of the development.
+Acceptance tests: Validate the acceptance criteria of the functionality according to the behavior established in the business requirements.
+
+8. SCRUM works with 4 main phases:
+    Planning:
+        Product Backlog: set of needs and functionalities described by the product owner.
+        Sprint Backlog: defines the times and tasks of each member to perform.
+    Implementation:
+        Sprint: time to carry out the tasks assigned in the Sprint Backlog where partial deliveries are made in order to test them. It is a cyclic process until the list of tasks defined in the Backlog is fulfilled.
+    Control:
+        Burn Down: details the evolution of the tasks and requirements until reaching the goal.
+        Planning meeting: Meeting to define the objectives of the new Sprint.
+        Daily Scrum: daily follow-up of the tasks to be carried out.
+    Entities:
+        Product owner: defines the objectives of the project and validates that these objectives are met.
+        Scrum Master: It is in charge of checking that each member has task assignments and represents a team guide.
+        Scrum Team: they are involved in the development and delivery of the project.
+        Stakeholders: They are owners or commercial of the project.
+
+9. TDD consists of first defining the tests and the expected behaviors of a new functionality, and then being able to write source code that meets the objectives of the tests.
+In this way, a more robust code is achieved, safer, easier to maintain and speed up development.
+
+10. The process when accessing “https://www.google.com”:
+    1. The browser, as a client, makes a request to the DNS server.
+    2. The real Google server address is detected.
+    3. The browser sends an HTTP message to the server requesting a copy of the web page.
+    4. The transfer of pages and data is done through TCP/IP protocols.
+    5. The Google server, upon receiving a successful request, sends all parts of the page. (structure, style and functionality).
+    6. The browser puts all the pieces together, forms the entire Google site, and displays it.
+
+11. Kubernetes, Visual Studio Code, Brave.
+
+12. -
