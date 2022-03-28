@@ -29,7 +29,7 @@
 4. CI is based on the automation and testing of integrations to be able to identify possible failures and incidents and thus facilitate resolution.
 CD is responsible for implementing the changes and updates detected within CI in test environments in order to deploy them in production environments.
 
-5.
+5. pipeline.png
 
 6. Tools or platforms:
     - CI/CD: Jenkins, TravisCI, AWS Code Deploy, Azure DevOps
